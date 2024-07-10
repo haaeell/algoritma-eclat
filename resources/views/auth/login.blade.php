@@ -67,6 +67,15 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
+                        @if($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                         <div class="row d-flex align-items-center">
                             <div class="col-md-6 text-center">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Qz5pr8POWepy3wjCGigEPjX9iRcqRoJywQ&s" alt="" class="login-image">
